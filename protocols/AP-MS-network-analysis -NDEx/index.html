@@ -39,7 +39,7 @@
                     <version>3.7.2</version>
                 </div>
             </section>
-            
+
             <section>
                 <h1>Background</h1>
                 <p>The data used for this protocol represents interactions between human and HIV proteins by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3310911/" target="_blank">Jäger et al</a>. In this quantitative AP-MS experiment, a relatively small number of bait proteins are used to pull down a larger set of prey proteins.</p>
@@ -53,7 +53,7 @@
                 <ul>
                     <li><a href="https://cytoscape.org/download.html" target="_blank">Cytoscape 3.7.2</a></li>
                     <li>An account on <a href="https://ndexbio.org">NDEx, the Network Data Exchange</a></li>
-                </ul> 
+                </ul>
                 <p>If you do not already have an account on NDEx, <br>create one following the <a href="https://home.ndexbio.org/create-an-ndex-account/">Create an NDEx Account</a> tutorial </p>
             </section>
 
@@ -76,16 +76,16 @@
 
             <section>
                 <h1>Augmenting the Network with Existing Protein-protein Interaction Data</h1>
-                
+
                 <p>Now we are going to capitalize on existing protein-protein interaction data to enrich our network; we will use the new <a href="http://iquery.ndexbio.org/" target="_blank">NDEx Integrated Query</a> (IQuery) with the human protein nodes from our network as query input.</p>
 
                 <ul>
                     <li>In the <highlight>Node Table</highlight>, sort the table for your network by the <highlight>Uniprot</highlight> column by clicking on the header once. This will sort for the human protein nodes, which are the ones with entries for <highlight>Uniprot</highlight>.</li>
-                    
+
                     <li>Select all the genes in the <highlight>name</highlight> column that have a corresponding <highlight>UniProt</highlight> ID by selecting the top item, then scroll down and hold down <b>Shift</b> and then selecting the last entry. Click <highlight>Ctrl+C</highlight> to copy.</li>
-                    
+
                     <li>Open your browser, go to the <a href="http://iquery.ndexbio.org">IQuery</a> website, paste the list of gene symbols into the <highlight>Query Box</highlight> and click the search icon <img class="plain" src="SearchIcon.png" style="height:30px"> to run the query.</li>
-                    
+
                     <li>In the following results screen, select the <highlight>Protein Interactions</highlight> tab to view all query results from several different sources; although you can choose any of the sources available, for the purpose of this protocol let's select the <highlight>STRING (High Confidence)</highlight> result and then click the <highlight>Cytoscape</highlight> icon in the top right portion of the screen.</li>
                 </ul>
 
@@ -145,7 +145,7 @@
                 <ul>
                     <img class="border" src="ap-ms-style.png" style="float:right;height:550px">
                     <li>In the <highlight>Style</highlight> tab of the <highlight>Control Panel</highlight>, click the <highlight>Options</highlight> menu and select <highlight>Create New Style...</highlight>. Name the style <b>AP-MS</b>.</li>
-                    
+
                     <li>Check the <highlight>Lock node width and height</highlight>.</li>
                     <li>Set the node <highlight>Size</highlight> to 50.</li>
                     <li>Set the default node <highlight>Fill Color</highlight> to light grey.</li>
@@ -163,18 +163,24 @@
 
             <section>
                 <h1>Pathway Enrichment</h1>
-                <p>We can find pathway networks relevant to the host proteins using IQueryuery</p>
-                <ul>
-                    <li>On the IQuery web page, select the Pathway Enrichment tab to view pathway networks sorted by their enrichment with host proteins.</li>
-                    
-                     <li>There are three ways to sort the enrichment query results, selected the <highlight>sorting menu</highlight>. Click on the "i" icon next to the sorting dropdown menu to see the documentation for each sorting method. By default, the Similarity method is used. Choose the Overlap or p-Value methods and the order of the pathways will change.</li>
-                    
-                    <li>Note that because the example network that we chose is also a member of the set of pathways evaluated by IQuery, it is of course the top-ranked network found.</li>
-                    
-                    <li>Select the nth choice blah blah</li>
-                    
-                               
-                </ul>
+                <p>We can find pathway networks relevant to the host proteins using IQuery. Go back to the IQuery web page and select the Pathway Enrichment tab. The page should look like this:</p>
+                <img class="plain" src="iquery-enrichment.png" style="height:650px">
+            </section>
+
+            <section>
+                <h1>Pathway Enrichment</h1>
+
+                <p>There are three ways to sort the enrichment query results, selected by the <highlight>sorting menu</highlight>. Click on the "i" icon next to the sorting dropdown menu to see the documentation for each sorting method. By default, the Similarity method is used. Choose the Overlap or p-Value methods and the order of the pathways will change.</p>
+
+                <img class="plain" src="sorting-menu.png" style="height:150px">
+
+                <p>Each enriched pathway shows its 3 scores</p>
+
+                <img class="plain" src="enrichment-scores.png" style="height:150px">
+
+                <p>Note that because the example network that we chose is also a member of the set of pathways evaluated by IQuery, it is of course the top-ranked network found.</p>
+
+                <p>Select the 5th choice "GO:0006413 (translational initiation)"</p>
 
             </section>
 
